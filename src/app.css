@@ -1,0 +1,14 @@
+.main {
+  padding: 2rem;
+}
+
+.open-btn {
+  background-color: #000;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  outline: none;
+  padding: 0.5rem 1rem;
+}

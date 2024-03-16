@@ -1,0 +1,32 @@
+.modal-container {
+  background-color: #b3b3b3a9;
+  inset: 0;
+  position: absolute;
+}
+
+.modal {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  bottom: 70px;
+  box-shadow: #64646f4d 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  left: calc(50% - 200px);
+  padding: 2rem;
+  position: absolute;
+  top: 70px;
+  width: 400px;
+}
+
+.close-btn {
+  background-color: #000;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 0.5rem 1rem;
+}
