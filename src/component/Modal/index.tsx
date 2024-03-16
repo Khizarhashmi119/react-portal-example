@@ -1,4 +1,4 @@
-import useClickOutside from "../../hooks/useClickOutside";
+import { forwardRef } from "react";
 
 import "./styles.css";
 
@@ -6,14 +6,12 @@ type Props = {
   handleClickClose: () => void;
 };
 
-const Modal = (props: Props): JSX.Element => {
+const Modal = forwardRef<HTMLDivElement | null, Props>((props, ref) => {
   const { handleClickClose } = props;
 
-  const modalContainerRef = useClickOutside(handleClickClose);
-
   return (
-    <div ref={modalContainerRef} className="modal-container">
-      <div className="modal">
+    <div className="modal-container">
+      <div ref={ref} className="modal">
         <h1>Modal title</h1>
         <button className="close-btn" type="button" onClick={handleClickClose}>
           Close
@@ -21,6 +19,6 @@ const Modal = (props: Props): JSX.Element => {
       </div>
     </div>
   );
-};
+});
 
 export default Modal;

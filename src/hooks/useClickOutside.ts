@@ -4,11 +4,11 @@ function useClickOutside(handleClickOutside: () => void) {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    ref.current?.addEventListener("click", (event) => {
+    window.addEventListener("mousedown", (event) => {
       const { target } = event;
 
       if (target instanceof HTMLElement) {
-        const isOutside = !target.closest(".modal");
+        const isOutside = !ref.current?.contains(target);
 
         if (isOutside) {
           handleClickOutside();
